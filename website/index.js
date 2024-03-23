@@ -91,3 +91,66 @@ console.log(z);
 */
 
 //--------------------------------------------------------------------------
+
+
+
+
+//TERNERY OPERATOR
+
+
+//SAME AS USING IF ELE
+
+/*let age = 21;
+let message = age >= 18 ? "You're an adult" : "You're a minor";
+console.log(message);
+
+
+let time = 16;
+let greeting = time < 12 ? "Good morning" : "Good Afternoon";
+*/
+
+//--------------------------------------------------------------------------
+
+// IF USING ALOT OF IF ELSE YOU CAN TRY USING SWITCH
+
+/*
+let day = "pizza";
+
+switch (day) {
+    case 1:
+        console.log("It is Monday");
+        break;
+    case 2:
+        console.log("It is Tuesday");
+        break;
+    case 3:
+        console.log("It is Wednesday");
+        break;
+    default:
+        console.log(`${day} is not a correct value`);
+}
+
+
+
+let testScore = 60;
+let grade;
+
+switch (true) {
+    case testScore >= 90:
+        grade = "A";
+        break;
+    case testScore >= 80:
+        grade = "B";
+        break;
+    case testScore >= 70:
+        grade = "C";
+        break;
+    case testScore >= 60:
+        grade = "D";
+        break;
+    default:
+        grade = "F";
+}
+
+console.log(grade);
+*/
