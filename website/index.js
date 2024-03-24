@@ -190,3 +190,49 @@ console.log(phoneNumber);
 */
 
 
+//--------------------------------------------------------------------------
+
+
+//String slicing
+/*
+const fullName = "Tomasauskas Tomukas";
+
+
+let firstName = fullName.slice(0, 5);
+let lastName = fullName.slice(6, 14); // Don't necessary need the ending index to reveive result
+let firstChar = fullName.slice(0, 1);
+let lastChar = fullName.slice(-1);
+
+console.log(firstName);
+console.log(lastName);
+console.log(firstChar);
+console.log(lastChar);
+
+
+
+let firstName = fullName.slice(0, fullName.indexOf(" "));
+let lastName = fullName.slice(fullName.indexOf(" ") + 1);
+
+console.log(firstName);
+console.log(lastName);
+
+
+
+const email = "tomas@gmail.com";
+
+let username = email.slice(0, email.indexOf("@"));
+let domain = email.slice(email.indexOf("@")+1, email.indexOf("."));
+
+
+console.log(username);
+console.log(domain);
+
+/*
+
+
+
+
+
+
+
+
