@@ -154,3 +154,39 @@ switch (true) {
 
 console.log(grade);
 */
+
+
+
+//--------------------------------------------------------------------------
+
+//STRING METHODS
+
+/*
+let userName = "DUMBuldoras";
+
+//console.log(userName.charAt(6));
+//console.log(userName.indexOf("u"));
+//console.log(userName.length);
+//console.log(userName.trim());
+//console.log(userName.toLocaleUpperCase());
+//console.log(userName.toLocaleLowerCase());
+//console.log(userName.repeat(20));
+//console.log(userName.startsWith("D"));
+//console.log(userName.endsWith("s")); //BOOLEAN
+//console.log(userName.includes("f")); // BOOLEAN
+
+//console.log(userName.replace("D", "A"));
+
+let phoneNumber = "123-456-7890";
+
+//phoneNumber = phoneNumber.padStart(20, "000");
+
+console.log(phoneNumber);
+
+phoneNumber = phoneNumber.padEnd(20, "000");
+
+console.log(phoneNumber);
+
+*/
+
+
