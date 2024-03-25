@@ -227,12 +227,79 @@ let domain = email.slice(email.indexOf("@")+1, email.indexOf("."));
 console.log(username);
 console.log(domain);
 
+*/
+
+
+//--------------------------------------------------------------------------
+
+
+//METHOD CHAINING
 /*
+let userName = window.prompt("Ener your username:");
+
+userName = userName.trim();
+
+let letter = userName.charAt(0);
+
+letter = letter.toLocaleUpperCase();
+
+let extraChar = userName.slice(1);
+
+extraChar = extraChar.toLocaleLowerCase();
+
+userName = letter + extraChar;
+
+console.log(userName);
+
+
+userName = userName.trim().charAt(0).toLocaleUpperCase() + userName.trim().slice(1).toLocaleLowerCase();
+
+console.log(userName);
+
+*/
+
+
+//--------------------------------------------------------------------------
+
+/* LOGICAL OPERATORS
+
+
+// AND = &&
+// OR = ||
+// NOT = !
+
+//BOTH have to be true
+const temp = 2;
+
+if (temp > 0 && temp <= 30) {
+    console.log("The weather is perfect!")
+}
+else {
+    console.log("The weather is bad.")
+
+}
 
 
 
+const temp2 = 2;
+
+if (temp2 > 0 || temp2 <= 30) {
+    console.log("The weather is perfect!")
+}
+else {
+    console.log("The weather is bad.")
+
+}
 
 
 
+const isSunny = true;
 
+if(!isSunny){
+    console.log("Sauleta");
+}
+else {
+    console.log("Nesauleta");
+}
 
+*/
