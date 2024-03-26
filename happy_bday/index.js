@@ -28,12 +28,7 @@ while (isRunning) {
 
 /*
 function isValidEmail(email) {
-    if (email.includes("@")) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return email.includes("@") ? true : false;
 }
 
 console.log(isValidEmail("tomkas@gmail.com"));
