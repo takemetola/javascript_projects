@@ -303,3 +303,37 @@ else {
 }
 
 */
+
+//--------------------------------------------------------------------------
+
+
+//ARRAY
+
+let names = ["Bimas", "Rikis", "Uzi"];
+
+names[3] = "namiokas";
+
+names.push("nameselis"); // ADDS TO THE END
+names.pop(); // Removes the last element
+names.unshift("nameselis"); // adds element to the beginning of the array
+names.shift(); // removes an element from the beggining
+
+let index = names.indexOf("roko"); // if element is not found it will return -1
+
+console.log(index);
+
+
+
+console.log(names[0]);
+
+for(let i = 0; i< names.length; i++){
+    console.log(names[i]);
+}
+// REVERSE DISPLAY
+for(let i = names.length - 1; i>= 0; i--){ 
+    console.log(names[i]);
+}
+
+for(let name of names){
+    console.log(name);
+}
