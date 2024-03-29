@@ -308,7 +308,7 @@ else {
 
 
 //ARRAY
-
+/*
 let names = ["Bimas", "Rikis", "Uzi"];
 
 names[3] = "namiokas";
@@ -334,6 +334,43 @@ for(let i = names.length - 1; i>= 0; i--){
     console.log(names[i]);
 }
 
+
+//SHORTCUT OF DISPLAYING ARRAY
 for(let name of names){
     console.log(name);
 }
+
+names.sort(); //SORTS IN ALPHABETICAL METHOD
+names.sort().reverse(); // REVERSES
+
+*/
+
+//--------------------------------------------------------------------------
+
+
+//SPREAD OPERATOR
+/*
+let numbers = [0, 2, 3, 4, 5, 6];
+let maximum = Math.max(...numbers); // ... unpacks elements in an array
+let minimum = Math.min(...numbers);
+
+console.log(maximum);
+console.log(minimum);
+
+let username = "Tomas Tomauskas";
+let letters = [...username].join("."); // adds . after each leter
+
+console.log(letters);
+
+let fruits = ["apple", "pear", "banana"];
+let newFruits = [...fruits];
+let vegetables = ["carrots", "patata", "gurke"];
+
+let foods = [...fruits, ... vegetables, "eggs", "BREAD"];
+
+console.log(fruits);
+console.log(newFruits);
+console.log(foods);
+
+*/
+
