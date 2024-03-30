@@ -374,3 +374,63 @@ console.log(foods);
 
 */
 
+
+// rest parameters (...rest) allow a function to work with a varaubke number of arguments by putting them into an array
+
+function openFridge(...foods){
+    console.log(...foods);
+}
+
+function getFood(...foods){
+    return foods;
+}
+
+const food1 = "pizza";
+const food2 = "hamburger";
+const food3 = "hotdog";
+const food4 = "kugelis";
+
+openFridge(food1, food2, food3, food4);
+
+const foods = getFood(food1, food2, food3, food4);
+
+console.log(foods);
+
+
+
+function sum(...numbers){
+    let result = 0;
+    for(let number of numbers){
+        result += number;
+    }
+    return result;
+}
+
+//const total = sum(1,1,1,1);
+
+//console.log(`Your total is ${total}`);
+
+function getAverage(...numbers){
+    let result = 0;
+    for(let number of numbers){
+        result += number;
+    }
+    return result / numbers.length;
+}
+
+const avg = getAverage(75,100,85,99);
+
+console.log(`Your average is ${avg}`);
+
+
+function combineStrings(...names){
+    return names.join(" ");
+}
+
+
+
+const fullName = combineStrings("Mr.","Homer","Simpson","Junior");
+
+console.log(fullName);
+
+
