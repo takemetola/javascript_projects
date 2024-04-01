@@ -330,7 +330,7 @@ for(let i = 0; i< names.length; i++){
     console.log(names[i]);
 }
 // REVERSE DISPLAY
-for(let i = names.length - 1; i>= 0; i--){ 
+for(let i = names.length - 1; i>= 0; i--){
     console.log(names[i]);
 }
 
@@ -374,9 +374,12 @@ console.log(foods);
 
 */
 
+//--------------------------------------------------------------------------
 
 // rest parameters (...rest) allow a function to work with a varaubke number of arguments by putting them into an array
 
+
+/*
 function openFridge(...foods){
     console.log(...foods);
 }
@@ -433,4 +436,41 @@ const fullName = combineStrings("Mr.","Homer","Simpson","Junior");
 
 console.log(fullName);
 
+*/
 
+//--------------------------------------------------------------------------
+
+
+// callback = a function that is passed as an argument to another function.
+
+
+// calling a function within a function;
+/*
+hello(bye);
+
+
+function hello(callback){
+    console.log("Hello!");
+    callback();
+}
+
+function bye(){
+    console.log("Bye!");
+}
+*/
+
+sum(displayPage, 1, 2);
+
+function sum(callback, x, y){
+    let result = x + y;
+    callback(result);
+}
+
+function displayConsole(result){
+    console.log(result);
+}
+
+function displayPage(result){
+    document.getElementById("myH1").textContent = result;
+
+}
