@@ -563,6 +563,7 @@ function upperCase(element){
 }
 */
 
+/*
 const dates = ["2024-1-11", "1992-06-14", "1986-12-16"];
 
 const formattedDates = dates.map(formatDates);
@@ -574,3 +575,48 @@ function formatDates(element) {
     return `${parts[2]}/${parts[1]}/${parts[0]}}`;
 
 }
+*/
+
+//--------------------------------------------------------------------------
+
+// .filter() creates a new array by filtering out elements
+
+/*
+let numbers = [1, 2, 3, 4, 5, 6, 7];
+let evenNums = numbers.filter(isEven);
+let oddNums = numbers.filter(isOdd);
+
+console.log(evenNums);
+console.log(oddNums);
+
+function isEven(element) {
+    return element % 2 === 0;
+}
+
+function isOdd(element) {
+    return element % 2 !== 0;
+}
+*/
+/*
+const ages = [16, 14, 18, 19, 29, 15];
+
+let isAbove = ages.filter(isOver18);
+
+console.log(isAbove);
+
+function isOver18(element) {
+    //  if (element >= 18)
+    // return element
+    return element >= 18;
+}
+*/
+
+const words = ["banana", "avocado", "orange", "pear", "coconut", "watermeloni"];
+let shortWords = words.filter(getShortWords);
+
+console.log(shortWords);
+
+function getShortWords(element){
+    return element.length <= 6;
+}
+
