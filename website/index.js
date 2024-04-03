@@ -610,7 +610,7 @@ function isOver18(element) {
     return element >= 18;
 }
 */
-
+/*
 const words = ["banana", "avocado", "orange", "pear", "coconut", "watermeloni"];
 let shortWords = words.filter(getShortWords);
 
@@ -619,4 +619,31 @@ console.log(shortWords);
 function getShortWords(element){
     return element.length <= 6;
 }
+*/
+//--------------------------------------------------------------------------
 
+
+// .reduce() method reduces the elements of an arary to a single value;
+
+/*
+const prices = [9,18.99,20.25,25,26,99];
+
+const total = prices.reduce(sum);
+
+console.log(`€${total.toFixed(2)}`);
+
+function sum(previous, next){  //it keeps adding elements until no left
+    return previous + next;
+}
+
+*/
+
+const grades = [100,25,75,65,99];
+
+const maxScore = grades.reduce(getMax);
+
+console.log(maxScore);
+
+function getMax(accu, element){
+    return Math.max(accu, element);
+}
