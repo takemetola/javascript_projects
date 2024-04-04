@@ -638,6 +638,7 @@ function sum(previous, next){  //it keeps adding elements until no left
 
 */
 
+/*
 const grades = [100,25,75,65,99];
 
 const maxScore = grades.reduce(getMax);
@@ -647,3 +648,35 @@ console.log(maxScore);
 function getMax(accu, element){
     return Math.max(accu, element);
 }
+
+*/
+
+//--------------------------------------------------------------------------
+
+
+// function declaration = define a reusable block of code that performs a specific task
+// function expressions = a way to define functions as values or variables
+/*
+setTimeout(function(){
+    console.log("Hello");}, 3000);
+*/
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const cube = numbers.map(function (element) {
+    return Math.pow(element, 3);
+}
+);
+console.log(cube);
+
+const evenNumbs = numbers.filter(function(element){
+    return element % 2 === 0;
+})
+
+console.log(evenNumbs);
+
+
+const total = numbers.reduce(function(accu, element){
+    return accu + element;
+})
+
+console.log(total);
