@@ -661,7 +661,7 @@ setTimeout(function(){
     console.log("Hello");}, 3000);
 */
 
-const numbers = [1, 2, 3, 4, 5, 6];
+/* const numbers = [1, 2, 3, 4, 5, 6];
 const cube = numbers.map(function (element) {
     return Math.pow(element, 3);
 }
@@ -679,4 +679,86 @@ const total = numbers.reduce(function(accu, element){
     return accu + element;
 })
 
-console.log(total);
+console.log(total); */
+
+
+//--------------------------------------------------------------------------
+
+// arrow function = way to write function expression (parameters) => some code
+
+
+/* 
+const hello = function(){
+    console.log("Hello!");
+}
+
+hello();
+
+const hello2 = () => console.log("Hello");
+
+hello2();
+
+const hello3 = (name,age) => {console.log(`Hi, ${name}!`)
+                        console.log(`You are ${age} years old`)};
+
+hello3("Mutz", 32); */
+
+/* 
+setTimeout(hello, 3000);
+
+function hello(){
+    console.log("Hello!");
+}
+
+setTimeout(function(){
+    console.log("Hello2");
+}, 3000);
+
+setTimeout(() => console.log("Hello3"), 3000); */
+
+/* const numbers = [1, 2, 3, 4, 5, 6,];
+
+const squares = numbers.map((element) => Math.pow(element, 2));
+const cubes = numbers.map((element) => Math.pow(element, 3));
+const oddNum = numbers.filter((element) => element % 2 !== 0);
+const evenNum = numbers.filter((element) => element % 2 === 0);
+const sumNum = numbers.reduce((accu, element) => accu + element);
+
+
+console.log(squares);
+console.log(cubes);
+console.log(oddNum);
+console.log(evenNum);
+console.log(sumNum);
+ */
+
+//--------------------------------------------------------------------------
+
+// object = a collection of related properties and/or methods. object = {key:value,function()};
+
+const person1 = {
+    firstName: "Bob",
+    lastName: "Marley",
+    age: 30,
+    isEmployed: false,
+    sayHello: function(){console.log("Haya, buddy")},
+}
+
+console.log(person1.firstName);
+console.log(person1.isEmployed);
+person1.sayHello();
+
+const person2 = {
+    firstName: "Kate",
+    lastName: "White",
+    age: 33,
+    isEmployed: true,
+    sayHello: function(name){console.log(`Good afternoon ${name}`)},
+    sayBye: (name) => console.log(`Später ${name}`),
+}
+
+console.log(person2.firstName);
+console.log(person2.isEmployed);
+person2.sayHello("Muutz");
+person2.sayBye("Mutzininke");
+
