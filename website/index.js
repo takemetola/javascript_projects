@@ -736,7 +736,8 @@ console.log(sumNum);
 
 // object = a collection of related properties and/or methods. object = {key:value,function()};
 
-const person1 = {
+
+/* const person1 = {
     firstName: "Bob",
     lastName: "Marley",
     age: 30,
@@ -761,4 +762,26 @@ console.log(person2.firstName);
 console.log(person2.isEmployed);
 person2.sayHello("Muutz");
 person2.sayBye("Mutzininke");
+ */
 
+
+
+//--------------------------------------------------------------------------
+
+// this = reference to the object where THIS is used
+// (the object depends on the immediate context)
+// person.name = this.name
+
+const person1 = {
+    name: "Bob",
+    faveFood: "pasta",
+    sayHello: function(){console.log(`Hi! I am ${this.name}`)},
+    //sayHello: function(){console.log(`Hi! I am ${person1.name}`)}, its the same as above
+    //eat: function(){console.log(`I like to eat ${this.faveFood}`)}
+    eat: function(){console.log(`I like to eat ${person1.faveFood}`)}
+
+
+}
+
+person1.sayHello();
+person1.eat();
