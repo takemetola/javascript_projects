@@ -772,16 +772,42 @@ person2.sayBye("Mutzininke");
 // (the object depends on the immediate context)
 // person.name = this.name
 
-const person1 = {
+/* const person1 = {
     name: "Bob",
     faveFood: "pasta",
-    sayHello: function(){console.log(`Hi! I am ${this.name}`)},
+    sayHello: function () { console.log(`Hi! I am ${this.name}`) },
     //sayHello: function(){console.log(`Hi! I am ${person1.name}`)}, its the same as above
     //eat: function(){console.log(`I like to eat ${this.faveFood}`)}
-    eat: function(){console.log(`I like to eat ${person1.faveFood}`)}
+    eat: function () { console.log(`I like to eat ${person1.faveFood}`) }
+
+    // this.name doesnt work with () =>
 
 
 }
 
 person1.sayHello();
-person1.eat();
+person1.eat(); */
+
+//--------------------------------------------------------------------------
+
+
+
+// constructor = special method for defining the properties and methods of object
+
+function Car(make, model, year, color){
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color
+    this.drive = function(){console.log(`You drive ${this.color} ${this.make} ${this.model} made in ${this.year}`)}
+}
+
+const car1 = new Car("Nissan", "Skyline", 1990, "blue");
+const car2 = new Car("Honda", "CBR", 2000, "black");
+const car3 = new Car("Ford", "Mustag", 1978, "grey");
+
+
+car1.drive();
+car2.drive();
+car3.drive();
+
