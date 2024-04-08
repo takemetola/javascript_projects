@@ -794,7 +794,7 @@ person1.eat(); */
 
 // constructor = special method for defining the properties and methods of object
 
-function Car(make, model, year, color){
+/* function Car(make, model, year, color){
     this.make = make,
     this.model = model,
     this.year = year,
@@ -809,5 +809,41 @@ const car3 = new Car("Ford", "Mustag", 1978, "grey");
 
 car1.drive();
 car2.drive();
-car3.drive();
+car3.drive(); */
 
+//--------------------------------------------------------------------------
+
+// class = (ES6 feature) provides a more stuctured and cleaner way 
+// to wirk with objects compared to traditional constructor functions
+// for example: static keyword, encapsulation, inheritance
+
+class Product{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+
+    displayProduct(){
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: ${this.price.toFixed(2)}€`);
+    }
+    
+    calculateTotal(vatTax){
+        return this.price + (this.price * vatTax)
+    }
+}
+
+const vatTax = 0.2;
+
+const product1 = new Product("Shirt", 29.99);
+const product2 = new Product("Leggings", 10.90);
+const product3 = new Product("Underwear", 49.90);
+
+
+
+product1.displayProduct();
+
+
+const total = product1.calculateTotal(vatTax);
+
+console.log(`Total price (with tax): ${total.toFixed(2)}€`);
