@@ -919,7 +919,7 @@ User.getUserCount(); */
 
 
 
-class Animal{
+/* class Animal{
     alive = true;
 
     eat(){
@@ -973,3 +973,53 @@ fish.swim();
 lizard.crawl();
 lizard.swim();
 
+ */
+
+
+//--------------------------------------------------------------------------
+
+
+// super = keyword is used in classes to call the constructor or acess 
+// the properties and methods of a parent (superclass)
+// this = this Object
+// super = the parent
+
+class Animal {
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+class Rabbit extends Animal {
+
+    constructor(name, age, runSpeed) {
+        super(name, age);
+        this.runSpeed = runSpeed;
+    }
+}
+
+class Fish extends Animal {
+
+    constructor(name, age, swimSpeed) {
+        super(name, age);
+        this.swimSpeed = swimSpeed;
+    }
+}
+
+class Hawk extends Animal {
+
+    constructor(name, age, flySpeed) {
+        super(name, age);
+        this.flySpeed = flySpeed;
+    }
+}
+
+const rabbit = new Rabbit("rabbit", 1, 10);
+const fish = new Fish("fish", 1, 15);
+const hawk = new Hawk("hawk", 5, 30);
+
+console.log(rabbit.runSpeed);
+console.log(fish.swimSpeed);
+console.log(hawk.flySpeed, hawk.age, hawk.name);
