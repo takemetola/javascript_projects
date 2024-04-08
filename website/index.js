@@ -817,7 +817,7 @@ car3.drive(); */
 // to wirk with objects compared to traditional constructor functions
 // for example: static keyword, encapsulation, inheritance
 
-class Product{
+/* class Product{
     constructor(name, price){
         this.name = name;
         this.price = price;
@@ -846,4 +846,71 @@ product1.displayProduct();
 
 const total = product1.calculateTotal(vatTax);
 
-console.log(`Total price (with tax): ${total.toFixed(2)}€`);
+console.log(`Total price (with tax): ${total.toFixed(2)}€`); */
+
+
+//--------------------------------------------------------------------------
+
+
+// static = a keyword that defines properties or methods that belong to a
+// class itself rather than the objects created from that class (class owns
+//     anything static, not the objects)
+
+/* class mathUtil {
+    static PI = 3.14159;
+
+    static getDia(radius) {
+        return radius * 2;
+    }
+
+    static getCircum(radius) {
+        return 2 * this.PI * radius;
+    }
+
+    static getArea(radius) {
+        return this.PI * radius * radius;
+    }
+}
+
+console.log(mathUtil.PI);
+console.log(mathUtil.getDia(10));
+console.log(mathUtil.getCircum(10));
+console.log(mathUtil.getArea(10)); */
+
+
+class User {
+
+    static userCount = 0;
+
+    constructor(username) {
+        this.username = username;
+        User.userCount++;
+    }
+
+    sayHello(){
+        console.log(`Hey, my name is ${this.username}`)
+    }
+
+    static getUserCount(){
+        console.log(`There are ${this.userCount} people at home`)
+    }
+}
+
+const user1 = new User("Bob");
+const user2 = new User("Meg");
+const user3 = new User("Greg");
+
+console.log(user1.username);
+console.log(user2.username);
+console.log(User.userCount);
+
+user1.sayHello();
+user2.sayHello();
+user3.sayHello();
+
+User.getUserCount();
+
+
+
+
+
