@@ -687,7 +687,7 @@ console.log(total); */
 // arrow function = way to write function expression (parameters) => some code
 
 
-/* 
+/*
 const hello = function(){
     console.log("Hello!");
 }
@@ -703,7 +703,7 @@ const hello3 = (name,age) => {console.log(`Hi, ${name}!`)
 
 hello3("Mutz", 32); */
 
-/* 
+/*
 setTimeout(hello, 3000);
 
 function hello(){
@@ -827,7 +827,7 @@ car3.drive(); */
         console.log(`Product: ${this.name}`);
         console.log(`Price: ${this.price.toFixed(2)}€`);
     }
-    
+
     calculateTotal(vatTax){
         return this.price + (this.price * vatTax)
     }
@@ -878,7 +878,7 @@ console.log(mathUtil.getCircum(10));
 console.log(mathUtil.getArea(10)); */
 
 
-class User {
+/* class User {
 
     static userCount = 0;
 
@@ -908,9 +908,68 @@ user1.sayHello();
 user2.sayHello();
 user3.sayHello();
 
-User.getUserCount();
+User.getUserCount(); */
+
+
+// inheritance = allows a new class to inherit properties and methods
+// from an existing class (parent -> child) . REUSABILITY
+
+
+//--------------------------------------------------------------------------
 
 
 
+class Animal{
+    alive = true;
 
+    eat(){
+        console.log(`This ${this.name} is eating`);
+    }
+
+    sleep(){
+        console.log(`This ${this.name} is sleeping`);
+    }
+    swim(){
+        console.log(`This ${this.name} is swimming.`);
+
+    }
+}
+
+class Bat extends Animal{
+    name = "bat";
+    run(){
+        console.log(`This ${this.name} is running.`);
+    }
+}
+
+class Fish extends Animal{
+    name = "fish";
+    swim(){
+        console.log(`This ${this.name} is swimming.`);
+
+    }
+}
+
+class Lizard extends Animal{
+    name = "lizard";
+    crawl(){
+        console.log(`This ${this.name} is crawling.`);
+
+    }
+}
+
+const bat = new Bat();
+const fish = new Fish();
+const lizard = new Lizard();
+
+console.log(bat.alive);
+
+bat.eat();
+fish.sleep();
+lizard.eat();
+
+bat.run();
+fish.swim();
+lizard.crawl();
+lizard.swim();
 
