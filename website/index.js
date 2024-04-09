@@ -984,7 +984,7 @@ lizard.swim();
 // this = this Object
 // super = the parent
 
-class Animal {
+/* class Animal {
 
     constructor(name, age) {
         this.name = name;
@@ -1043,3 +1043,125 @@ console.log(hawk.flySpeed, hawk.age, hawk.name);
 rabbit.run();
 
 hawk.fly();
+ */
+
+//--------------------------------------------------------------------------
+
+
+// getter = special method that makes a property Readable
+// setter = special method that makes a property writable
+// validate and modify a value when reading/writing a property
+
+
+
+/* class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    set width(newWidth) {
+        if (newWidth > 0) {
+            this._width = newWidth;
+        }
+        else {
+            console.error("Width must be a positive num");
+        }
+    }
+
+    set height(newHeight) {
+        if (newHeight > 0) {
+            this._height = newHeight;
+        }
+        else {
+            console.error("Height must be a positive num");
+        }
+    }
+    get width() {
+        return this._width.toFixed(1) + " cm";
+    }
+
+    get height() {
+        return this._height;
+    }
+
+    get area(){
+        return this._width * this._height;
+    }
+
+}
+
+const rectangle = new Rectangle(3, 4);
+
+
+rectangle.width = 6;
+rectangle.height = 6;
+
+
+console.log(rectangle.width);
+console.log(rectangle.height);
+console.log(rectangle.area);
+ */
+
+
+
+class Person {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    set firstName(newFirstName) {
+        if (typeof newFirstName === "string" && newFirstName.length > 0) {
+            this._firstName = newFirstName;
+        }
+        else {
+            console.error("First name must be a string");
+        }
+    }
+
+    set lastName(newLastName) {
+        if (typeof newLastName === "string" && newLastName.length > 0) {
+            this._lastName = newLastName;
+        }
+        else {
+            console.error("Last name must be a string");
+        }
+    } 
+
+    set age(newAge) {
+        if (newAge > 0 && newAge < 120) {
+            this._age = newAge;
+        }
+        else {
+            console.error("Age must be a number greater than 0");
+        }
+    }
+
+    get firstName(){
+        return this._firstName;
+    }
+
+     get lastName(){
+        return this._lastName;
+    } 
+
+    get age(){
+        return this._age;
+    }
+
+    get fullName(){
+        return this._firstName + "" + this._lastName;
+    }
+
+}
+
+
+const person = new Person("Gloria", "Blue", 119);
+
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.age);
+console.log(person.fullName);
+
+
