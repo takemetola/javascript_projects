@@ -1105,7 +1105,7 @@ console.log(rectangle.area);
 
 
 
-class Person {
+/* class Person {
     constructor(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -1151,7 +1151,7 @@ class Person {
     }
 
     get fullName(){
-        return this._firstName + "" + this._lastName;
+        return this._firstName + " " + this._lastName;
     }
 
 }
@@ -1163,5 +1163,91 @@ console.log(person.firstName);
 console.log(person.lastName);
 console.log(person.age);
 console.log(person.fullName);
+ */
+
+//--------------------------------------------------------------------------
+
+
+// destructuring = extract values from arrays and objects, then assign them to variables in a 
+// convenient
+// [] = to perform array destructuring
+// {} = to perform object destructuring
+
+// SWAP the values of two variables
+
+/* let a = 1;
+let b = 2;
+
+[a, b] = [b, a];
+
+console.log(a);
+console.log(b);
+
+
+const colors = ["red", "green", "blue", "black", "white"];
+
+[colors[0], colors[4]] = [colors[4], colors[0]];
+
+console.log(colors); */
+
+
+// ASSIGN array elements to variables
+
+/* const colors = ["red", "green", "blue", "black", "white"];
+
+const [firstColor, secondColor, thirdColor, ...extraColors] = colors;
+
+console.log(firstColor);
+console.log(secondColor);
+console.log(thirdColor);
+console.log(extraColors); */
+
+/* const person1 = {
+    firstName: "Monica",
+    lastName: "Belluci",
+    age: 22,
+    job: "Chef"
+}
+
+const person2 = {
+    firstName: "Chad",
+    lastName: "Mongo",
+    age: 22,
+}
+
+const {firstName, lastName, age, job="undo"} = person1; // job was undefined so u can do that like this
+
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(job); */
+
+// EXTRACT values from objects
+
+function displayPerson({firstName, lastName, age, job="Driver"}){
+    console.log(`name ${firstName} ${lastName}`);
+    console.log(`age ${age}`);
+    console.log(`job ${job}`);
+}
+
+const person1 = {
+    firstName: "Monica",
+    lastName: "Belluci",
+    age: 22,
+    job: "Chef"
+}
+
+const person2 = {
+    firstName: "Chad",
+    lastName: "Mongo",
+    age: 22,
+}
+displayPerson(person1);
+
+displayPerson(person2);
+
+
+
+
 
 
