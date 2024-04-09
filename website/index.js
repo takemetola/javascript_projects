@@ -1224,7 +1224,7 @@ console.log(job); */
 
 // EXTRACT values from objects
 
-function displayPerson({firstName, lastName, age, job="Driver"}){
+/* function displayPerson({firstName, lastName, age, job="Driver"}){
     console.log(`name ${firstName} ${lastName}`);
     console.log(`age ${age}`);
     console.log(`job ${job}`);
@@ -1246,8 +1246,68 @@ displayPerson(person1);
 
 displayPerson(person2);
 
+ */
 
 
 
+//--------------------------------------------------------------------------
 
 
+// nested object = objects inside of other Objects.
+// allows you to represent more complex data structures
+// Child Object is enclosed by a parent object
+
+// Person{Address{}, ContactInfo{}}
+// ShoppingCart{Keyboard{}, Mouse{}, Monitor{}};
+
+/* const person = {
+    fullName: "Bobby Lee",
+    age: 45,
+    isStudent: false,
+    hobbies: ["comedy", "tv", "jokes"],
+        address: {
+            street: "Bollywood ave",
+            city: "LA",
+            country: "USA"
+        }
+}
+
+for(const property in person.address){
+    console.log(person.address[property])
+}
+
+console.log(person.fullName);
+console.log(person.age);
+console.log(person.isStudent);
+console.log(person.hobbies[0]);
+console.log(person.address.street);
+
+
+// to loop through nested object
+for(const property in person.address){
+    console.log(person.address[property])
+}
+
+ */
+
+class Person{
+    constructor(name, age, ...address){
+        this.name = name;
+        this.age  = age;
+        this.address = new Address(...address);
+    }
+}
+
+class Address{
+    constructor(street, city, country){
+        this.street = street;
+        this.city = city;
+        this.country = country;
+    }
+}
+
+const person1 = new Person("Bob", 40, "123 Cook st", "LA", "USA");
+const person2 = new Person("Mark", 69, "555 Cook st", "MIAMI", "CANADA");
+const person3 = new Person("John", 69, "001 Cook st", "NY", "MEXICO");
+
+console.log(person1.name);
