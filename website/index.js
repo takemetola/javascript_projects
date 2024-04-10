@@ -1290,7 +1290,7 @@ for(const property in person.address){
 
  */
 
-class Person{
+/* class Person{
     constructor(name, age, ...address){
         this.name = name;
         this.age  = age;
@@ -1310,4 +1310,45 @@ const person1 = new Person("Bob", 40, "123 Cook st", "LA", "USA");
 const person2 = new Person("Mark", 69, "555 Cook st", "MIAMI", "CANADA");
 const person3 = new Person("John", 69, "001 Cook st", "NY", "MEXICO");
 
-console.log(person1.name);
+console.log(person1.name); */
+
+//--------------------------------------------------------------------------
+
+
+// Array of objects
+
+const fruits = [{name: "apple", color: "red", calories: 95},
+                {name: "pear", color: "gree ", calories: 101},
+                {name: "avocado", color: "brown", calories: 150},
+                {name: "banana", color: "yellow", calories: 120}];
+
+
+
+//fruits.push({name:"strawberry", color: "black", calories: 23}); // adds an element to the end
+
+//fruits.pop(); // removes the last element
+
+//fruits.splice(0,3 ); // array.splice(start, deleteCount, item1, item2, ...);
+
+//fruits.forEach(fruit => console.log(fruit.calories)); // loop through the elements of the array
+
+//const fruitNames = fruits.map(fruit => fruit.name);
+
+//console.log(fruitNames);
+
+// const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+// const lowCalFruits = fruits.filter(fruit => fruit.calories <= 110);
+
+// console.log(lowCalFruits);
+
+//console.log(fruits);
+
+const maxFruit = fruits.reduce((max, fruit) => 
+fruit.calories > max.calories ? fruit : max);
+
+const minFruit = fruits.reduce((min, fruit) => 
+fruit.calories < min.calories ? fruit : min);
+
+console.log(maxFruit);
+console.log(minFruit);
+
