@@ -1317,11 +1317,11 @@ console.log(person1.name); */
 
 // Array of objects
 
-const fruits = [{name: "apple", color: "red", calories: 95},
+/* const fruits = [{name: "apple", color: "red", calories: 95},
                 {name: "pear", color: "gree ", calories: 101},
                 {name: "avocado", color: "brown", calories: 150},
                 {name: "banana", color: "yellow", calories: 120}];
-
+ */
 
 
 //fruits.push({name:"strawberry", color: "black", calories: 23}); // adds an element to the end
@@ -1343,12 +1343,39 @@ const fruits = [{name: "apple", color: "red", calories: 95},
 
 //console.log(fruits);
 
-const maxFruit = fruits.reduce((max, fruit) => 
+/* const maxFruit = fruits.reduce((max, fruit) => 
 fruit.calories > max.calories ? fruit : max);
 
 const minFruit = fruits.reduce((min, fruit) => 
 fruit.calories < min.calories ? fruit : min);
 
 console.log(maxFruit);
-console.log(minFruit);
+console.log(minFruit); */
 
+
+//--------------------------------------------------------------------------
+
+
+// scrollTo() = method used to sort elements of an array in place.an
+//                 sorts elements as strings in lexicographic ondragover, not alphabetical
+//                 lexicographic = (alphabet + numbers + symbols) as strings
+
+
+//let fruits = ["apple", "orange", "banana", "coconut", "pineapple"];
+let numbers = [99,105, 5,8,66,11,44]; //numbers treated as a string
+
+numbers.sort((a, b) => a - b); // sorts numbers from lowest to highest
+
+console.log(numbers);
+
+const people = [{name:"Bob", age:33, gpa: 2.5},
+                {name:"Andy",age:22, gpa: 3.5},
+                {name:"Cris", age:35, gpa: 4.0},]
+
+people.sort((a, b) => a.gpa - b.gpa);
+console.log(people);
+
+
+people.sort((a, b) => b.name.localeCompare(a.name));
+
+console.log(people);
