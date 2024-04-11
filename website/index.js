@@ -1385,7 +1385,7 @@ console.log(people); */
 
 // Shuffling elements in an array
 
-const cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+/* const cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
 //cards.sort(() => Math.random() - 0.5); //one way to shuffle an array , the bigger an array
 // the more inefficient it becomes
@@ -1394,11 +1394,6 @@ shuffle(cards);
 
 console.log(cards);
 
-
-//shuffle(cards);
-
-
-
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const random = Math.floor(Math.random() * (i + 1));
@@ -1406,3 +1401,47 @@ function shuffle(array) {
         [array[i], array[random]] = [array[random], array[i]];
     }
 }
+ */
+//--------------------------------------------------------------------------
+
+
+// Date objects = objects that contain values that represent dates and time
+// these date objects can be changed and formatted
+
+// date(year, month, day, hour, minute, second, ms)
+
+//const date = new Date(2024, 0, 1, 2, 3, 4, 5);
+//const date = new Date("2023-02-03T13:00:30Z"); // Z is for UTC time
+//const date = new Date(17000000000000); // when computer thinks time started, pass in ms
+
+/* const date = new Date();
+
+const year = date.getFullYear();
+const month = date.getMonth()
+const day = date.getDate();
+const hour = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
+const dayOfWk = date.getDay();
+
+
+console.log(year);
+console.log(month); // January is 0 thats why
+console.log(day);
+console.log(hour);
+console.log(minutes);
+console.log(seconds);
+console.log(dayOfWk); // Sunday is 0, Monday is 1 etc
+
+date.setFullYear(2026);
+date.setMonth(2);
+console.log(date); */
+
+const date1 = new Date("2023-12-31");
+const date2 = new Date("2024-01-01");
+
+if(date1 > date2){
+    console.log("Happy NY");
+}
+
+
