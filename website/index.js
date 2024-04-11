@@ -1402,6 +1402,8 @@ function shuffle(array) {
     }
 }
  */
+
+
 //--------------------------------------------------------------------------
 
 
@@ -1437,11 +1439,91 @@ date.setFullYear(2026);
 date.setMonth(2);
 console.log(date); */
 
-const date1 = new Date("2023-12-31");
+
+// Date compare
+/* const date1 = new Date("2023-12-31");
 const date2 = new Date("2024-01-01");
 
-if(date1 > date2){
+if(date2 > date1){
     console.log("Happy NY");
+} */
+
+//--------------------------------------------------------------------------
+
+
+// // closure = a function defined inside of another function,
+//             the inner function has access to the variables
+//             and scope of the outer function.
+//             Allow for private variables and state maintenance.
+
+
+/* function outer(){
+
+    let message = "Hello";
+    function inner(){
+        console.log(message);
+    }
+    inner();
 }
 
+message = "Goodbye";
 
+outer(); */
+
+
+/* function createCounter(){
+
+    let count = 0;
+    function increament(){
+        
+        count++;
+        console.log(`Count increased to ${count}`);
+    }
+
+    function getCount(){
+        return count;
+    }
+
+    return {increament, getCount};
+}
+
+const counter = createCounter();
+
+counter.increament();
+counter.increament();
+counter.increament();
+
+
+console.log(`The current count is ${counter.getCount()}`) */
+
+function createGame() {
+    let score = 0;
+
+    function increaseScore(points) {
+        score += points;
+        console.log(`+${points}pts`)
+    }
+
+    function decreaseScore(points) {
+        score -= points;
+        console.log(`-${points}pts`)
+    }
+
+    function getScore() {
+        return score;
+    }
+    return { increaseScore, decreaseScore, getScore };
+}
+
+const game = createGame();
+
+game.increaseScore(5);
+game.increaseScore(1);
+game.decreaseScore(1);
+game.increaseScore(5);
+
+
+
+console.log(`You have currently ${game.getScore()}pts`);
+
+let score = 100000;
