@@ -1362,7 +1362,7 @@ console.log(minFruit); */
 
 
 //let fruits = ["apple", "orange", "banana", "coconut", "pineapple"];
-let numbers = [99,105, 5,8,66,11,44]; //numbers treated as a string
+/* let numbers = [99,105, 5,8,66,11,44]; //numbers treated as a string
 
 numbers.sort((a, b) => a - b); // sorts numbers from lowest to highest
 
@@ -1378,4 +1378,31 @@ console.log(people);
 
 people.sort((a, b) => b.name.localeCompare(a.name));
 
-console.log(people);
+console.log(people); */
+
+
+//--------------------------------------------------------------------------
+
+// Shuffling elements in an array
+
+const cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+
+//cards.sort(() => Math.random() - 0.5); //one way to shuffle an array , the bigger an array
+// the more inefficient it becomes
+
+shuffle(cards);
+
+console.log(cards);
+
+
+//shuffle(cards);
+
+
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const random = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[random]] = [array[random], array[i]];
+    }
+}
