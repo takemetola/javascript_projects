@@ -1538,9 +1538,9 @@ console.log(`You have currently ${game.getScore()}pts`);
 // setTimeout(callback, delay);
 // clearTimeout(timeoutId) = can cancel a timeout before it triggers
 
-function sayHello() {
-    window.alert("Hello");
-}
+// function sayHello() {
+//     window.alert("Hello");
+// }
 
 //setTimeout(sayHello, 3000);
 
@@ -1550,7 +1550,7 @@ function sayHello() {
 
 // clearTimeout(timeoutId);
 
-let timeoutId;
+/* let timeoutId;
 
 function startTimer(){
     timeoutId =setTimeout(() => window.alert("Hello"), 3000);
@@ -1561,4 +1561,31 @@ function clearTimer(){
     clearTimeout(timeoutId);
     console.log("CLEARED");
 
-}
+} */
+
+
+//--------------------------------------------------------------------------
+
+// ES6 Module = an externa file that contains reusable code that can be imported
+// into other JavaScript files. Write reusable code for many different apps.
+// Can contain varaibles, classes, functions... and more 
+
+//     <script type="module" src="index.js"></script> this line in index.html
+
+import {PI, getCircumference, getArea, getVolume} from './mathUtil.js';
+
+console.log(PI);
+
+const circumference = getCircumference(10);
+
+console.log(circumference);
+
+const area = getArea(10);
+
+console.log(area);
+
+const volume = getVolume(10);
+
+console.log(volume);
+
+
