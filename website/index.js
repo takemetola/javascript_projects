@@ -1601,7 +1601,7 @@ console.log(volume); */
 //  handled with: callbacks, Promises, Async/Await
 
 
-function func1(callback){
+/* function func1(callback){
     setTimeout(() => {console.log("Task1"); callback()}, 3000); // setTimeout() is one of async calls
 
 }
@@ -1614,3 +1614,54 @@ function func2(){
 }
 
 func1(func2);
+ */
+
+//--------------------------------------------------------------------------
+
+
+// Error = an object that is created to represent a problem that occurs
+// try { } = encloses code that might potencially cause an error
+// catch { } = catch and handle any thrown Errors from try { }
+// finally { } = (optional) Always executes. Used mostly for clean up ex Close files, close connections , release resources
+
+/* try {
+    console.log(x);
+}
+catch(error){
+    console.error(error);
+}
+
+finally{
+    // CLOSE FILE
+    // CLOSE CONNECTIONS
+    // RELEASE RESOURCES
+    console.log("This always executes");
+}
+
+
+console.log("You have reached the ened!");
+ */
+
+
+try {
+    const dividend = Number(window.prompt("Enter a divident: "));
+    const divisor = Number(window.prompt("Enter a divisor: "));
+    
+    if(divisor == 0){
+        throw new Error("You can not divide by zero");
+    }
+
+    if(isNaN(dividend) || isNaN(divisor)){
+        throw new Error("You must type in a number");
+    }
+    const result = dividend / divisor;
+    
+    console.log(result); 
+}
+catch(error){
+    console.log(error);
+}
+
+
+console.log("This is the end.")
+5
