@@ -1671,7 +1671,7 @@ console.log("This is the end.")
 //DOM - DOCUMENT OBJECT MODEL
 
 
-const username = "Bob";
+/* const username = "Bob";
 
 const welcomeMsg = document.getElementById("welcome-msg");
 
@@ -1680,3 +1680,82 @@ welcomeMsg.textContent += username === "" ? ` Guest` : username;
 
 
 console.dir(document);
+ */
+
+//--------------------------------------------------------------------------
+
+// element selectors to manipulate HTML elements from the DOM
+
+// 1. document.getElementById()  // element or NULL
+// 2. document.getEelementsClassName() // HTML COLLECTION
+// 3. document.getElementsByTagName() // HTML COLLECTION
+// 4. document.querySelector() // ELEMENT OR NULL
+// 5. document.querySelectorAll() // NODELIST
+
+
+// 1. document.getElementById()  // element or NULL
+
+/* const heading = document.getElementById("my-heading");
+
+heading.style.backgroundColor = "orange";
+heading.style.textAlign = "center";
+
+heading.textContent = "CARS R US"
+
+console.log(heading); */
+
+// 2. document.getEelementsClassName() // HTML COLLECTION
+
+/* const fruits = document.getElementsByClassName("fruits");
+
+fruits[0].style.backgroundColor = "green";
+
+for(let fruit of fruits){
+    fruit.style.backgroundColor = "yellow";
+}
+
+//fruits.forEach(); // HTML collections dont have .forEach() method
+
+// Type casting as an Array
+Array.from(fruits).forEach(fruit => {
+    fruit.style.backgroundColor = "green";
+});
+
+console.log(fruits); */
+
+// 3. document.getElementsByTagName() // HTML COLLECTION
+
+/* const h4Elements = document.getElementsByTagName("h4");
+
+h4Elements[0].style.backgroundColor = "orange";
+
+for(let h4element of h4Elements){
+    h4element.style.backgroundColor = "yellow";
+}
+
+const listElements = document.getElementsByTagName("li")
+
+console.log(listElements);
+
+//listElements[0].style.backgroundColor = "green";
+
+Array.from(listElements).forEach(element => {
+    element.style.backgroundColor = "darkgreen";
+}); */
+
+
+// 4. document.querySelector() // ONLY RETURNS THE FIRST ELEMENT OR NULL
+
+/* const element = document.querySelector("ul");
+
+element.style.backgroundColor = "red"; */
+
+// 5. document.querySelectorAll() // NODELIST
+
+const foods = document.querySelectorAll("li");
+
+//fruits[1].style.backgroundColor = "purple";
+
+foods.forEach(food => {
+    food.style.backgroundColor = "purple";
+})
