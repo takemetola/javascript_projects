@@ -1643,7 +1643,7 @@ console.log("You have reached the ened!");
  */
 
 
-try {
+/* try {
     const dividend = Number(window.prompt("Enter a divident: "));
     const divisor = Number(window.prompt("Enter a divisor: "));
     
@@ -1664,4 +1664,19 @@ catch(error){
 
 
 console.log("This is the end.")
-5
+5 */
+
+//--------------------------------------------------------------------------
+
+//DOM - DOCUMENT OBJECT MODEL
+
+
+const username = "Bob";
+
+const welcomeMsg = document.getElementById("welcome-msg");
+
+welcomeMsg.textContent += username === "" ? ` Guest` : username;
+
+
+
+console.dir(document);
