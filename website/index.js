@@ -1752,10 +1752,70 @@ element.style.backgroundColor = "red"; */
 
 // 5. document.querySelectorAll() // NODELIST
 
-const foods = document.querySelectorAll("li");
+/* const foods = document.querySelectorAll("li");
 
 //fruits[1].style.backgroundColor = "purple";
 
 foods.forEach(food => {
     food.style.backgroundColor = "purple";
-})
+}); */
+
+//--------------------------------------------------------------------------
+
+
+// DOM Navigation
+
+// .firstElementChild
+// .lastEelementChild
+// .nextElementSibling
+// .previousElementSibling
+// .parentElement
+// .children
+
+// .firstElementChild
+
+/* const element = document.getElementById("fruits");
+const firstChild = element.firstElementChild;
+firstChild.style.backgroundColor = "yellow";
+
+const ulElements = document.querySelectorAll("ul");
+ulElements.forEach(ulElements => {
+    const firstChild = ulElements.firstElementChild;
+    firstChild.style.backgroundColor = "yellow";
+}) */
+
+// .lastEelementChild
+
+/* const element = document.getElementById("fruits");
+const lastChild = element.lastElementChild;
+lastChild.style.backgroundColor = "purple"; */
+
+
+// .nextElementSibling
+// .previousElementSibling // works very similair to next...
+
+/* const element = document.getElementById("veggies");
+const nextSibling = element.nextElementSibling;
+nextSibling.style.backgroundColor = "red"; */
+
+
+// .parentElement
+
+/* const element = document.getElementById("banana");
+const parent = element.parentElement;
+parent.style.backgroundColor = "blue"; */
+
+// .children
+
+const element = document.getElementById("veggies");
+const children = element.children;
+
+console.log(children);
+
+Array.from(children).forEach(child => {
+    child.style.backgroundColor = "yellow";
+});
+
+children[1].style.backgroundColor = "red";
+
+
