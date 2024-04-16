@@ -1807,7 +1807,7 @@ parent.style.backgroundColor = "blue"; */
 
 // .children
 
-const element = document.getElementById("veggies");
+/* const element = document.getElementById("veggies");
 const children = element.children;
 
 console.log(children);
@@ -1816,6 +1816,61 @@ Array.from(children).forEach(child => {
     child.style.backgroundColor = "yellow";
 });
 
-children[1].style.backgroundColor = "red";
+children[1].style.backgroundColor = "red"
+
+*/
 
 
+//--------------------------------------------------------------------------
+
+// Manipulate HTML elements
+
+//1. CREATE THE ELEMENT
+
+const newH1 = document.createElement("h1");
+
+//2. ADD ATTRIBUTES/PROPERTIES
+
+newH1.textContent = "I love pizza!";
+newH1.id = "myH1";
+newH1.style.color = "tomato";
+newH1.style.textAlign = "center";
+
+//3. Append Element to DOM 
+
+//document.body.append(newH1);
+
+//document.body.prepend(newH1);
+
+//document.getElementById("box2").append(newH1);
+
+//document.getElementById("box1").prepend(newH1);
+
+// const box2 = document.getElementById("box3");
+
+// document.body.insertBefore(newH1, box2);
+
+// const boxes = document.querySelectorAll(".box"); //with no id as reference
+// document.body.insertBefore(newH1, boxes[2]);
+
+// REMOVE HTML
+
+// document.getElementById("box2").append(newH1);
+
+// document.getElementById("box2").removeChild(newH1);
+
+// <li> LIST ITEM ELEMENT EXAMPLE
+
+ const newListItem = document.createElement("li");
+
+ newListItem.textContent = "coco";
+ newListItem.id = "coco";
+ newListItem.style.fontWeight = "bold";
+ newListItem.style.backgroundColor = "green";
+// //document.body.prepend(newListItem);
+// //document.getElementById("fruits").append(newListItem);
+
+const orange = document.getElementById("orange");
+document.getElementById("fruits").insertBefore(newListItem, orange);
+
+document.getElementById("fruits").removeChild(newListItem);
