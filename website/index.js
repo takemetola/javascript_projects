@@ -1906,7 +1906,7 @@ myBtn.addEventListener("mouseout", event => {
 
 //--------------------------------------------------------------------------
 
-const myBox = document.getElementById("myBox");
+/* const myBox = document.getElementById("myBox");
 const moveAmount = 10;
 let x = 0;
 let y = 0;
@@ -1945,5 +1945,22 @@ document.addEventListener("keydown", event => {
         myBox.style.left = `${5 *x}px`;
 
     }
-})
+}) */
 
+
+//--------------------------------------------------------------------------
+
+
+const myButton = document.getElementById("myBtn");
+const myImage = document.getElementById("myImg");
+
+myButton.addEventListener("click", event => {
+    if (myImage.style.visibility === "hidden") {
+        myImage.style.visibility = "visible";
+        myButton.textContent = "Hide";
+    }
+    else {
+        myImage.style.visibility = "hidden";
+        myButton.textContent = "Show";
+    }
+});
