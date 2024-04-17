@@ -1827,14 +1827,14 @@ children[1].style.backgroundColor = "red"
 
 //1. CREATE THE ELEMENT
 
-const newH1 = document.createElement("h1");
+// const newH1 = document.createElement("h1");
 
-//2. ADD ATTRIBUTES/PROPERTIES
+// //2. ADD ATTRIBUTES/PROPERTIES
 
-newH1.textContent = "I love pizza!";
-newH1.id = "myH1";
-newH1.style.color = "tomato";
-newH1.style.textAlign = "center";
+// newH1.textContent = "I love pizza!";
+// newH1.id = "myH1";
+// newH1.style.color = "tomato";
+// newH1.style.textAlign = "center";
 
 //3. Append Element to DOM 
 
@@ -1861,7 +1861,7 @@ newH1.style.textAlign = "center";
 
 // <li> LIST ITEM ELEMENT EXAMPLE
 
- const newListItem = document.createElement("li");
+ /* const newListItem = document.createElement("li");
 
  newListItem.textContent = "coco";
  newListItem.id = "coco";
@@ -1873,4 +1873,32 @@ newH1.style.textAlign = "center";
 const orange = document.getElementById("orange");
 document.getElementById("fruits").insertBefore(newListItem, orange);
 
-document.getElementById("fruits").removeChild(newListItem);
+document.getElementById("fruits").removeChild(newListItem); */
+
+//--------------------------------------------------------------------------
+
+// eventListener = listen for specific events to create interactive web 
+//                 events: click, mouseover, mouseout,
+//                 .addEventListener(event, callback);
+
+const myBox = document.getElementById("myBox");
+const myBtn = document.getElementById("myBtn");
+
+
+
+
+myBtn.addEventListener("click", event => {
+    myBox.style.backgroundColor = "red";
+    myBox.textContent = "pizza";
+});
+
+myBtn.addEventListener("mouseover", event => {
+    myBox.style.backgroundColor = "yellow";
+    myBox.textContent = "don't press";
+})
+
+myBtn.addEventListener("mouseout", event => {
+    myBox.style.backgroundColor = "red";
+    myBox.textContent = "pizza";
+})
+

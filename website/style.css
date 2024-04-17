@@ -1,4 +1,14 @@
-#fruits{
-    border: 3px solid;
-    font-size: 2rem;
+#myBox{
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    font-size: 4.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#myBtn{
+    font-size: 3rem;
 }
