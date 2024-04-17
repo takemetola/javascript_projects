@@ -1861,12 +1861,12 @@ children[1].style.backgroundColor = "red"
 
 // <li> LIST ITEM ELEMENT EXAMPLE
 
- /* const newListItem = document.createElement("li");
+/* const newListItem = document.createElement("li");
 
- newListItem.textContent = "coco";
- newListItem.id = "coco";
- newListItem.style.fontWeight = "bold";
- newListItem.style.backgroundColor = "green";
+newListItem.textContent = "coco";
+newListItem.id = "coco";
+newListItem.style.fontWeight = "bold";
+newListItem.style.backgroundColor = "green";
 // //document.body.prepend(newListItem);
 // //document.getElementById("fruits").append(newListItem);
 
@@ -1881,7 +1881,7 @@ document.getElementById("fruits").removeChild(newListItem); */
 //                 events: click, mouseover, mouseout,
 //                 .addEventListener(event, callback);
 
-const myBox = document.getElementById("myBox");
+/* const myBox = document.getElementById("myBox");
 const myBtn = document.getElementById("myBtn");
 
 
@@ -1900,5 +1900,50 @@ myBtn.addEventListener("mouseover", event => {
 myBtn.addEventListener("mouseout", event => {
     myBox.style.backgroundColor = "red";
     myBox.textContent = "pizza";
+})
+
+ */
+
+//--------------------------------------------------------------------------
+
+const myBox = document.getElementById("myBox");
+const moveAmount = 10;
+let x = 0;
+let y = 0;
+
+// document.addEventListener("keydown", event =>{
+//     myBox.textContent = "😋";
+//     myBox.style.backgroundColor = "yellow";
+// });
+
+// document.addEventListener("keyup", event =>{
+//     myBox.textContent = "🥵";
+//     myBox.style.backgroundColor = "tomato";
+// });
+
+document.addEventListener("keydown", event => {
+    if (event.key.startsWith("Arrow")) {
+
+        event.preventDefault();
+
+        switch (event.key) {
+            case "ArrowUp":
+                y -= moveAmount;
+                break;
+            case "ArrowDown":
+                y += moveAmount;
+                break;
+            case "ArrowRight":
+                x += moveAmount;
+                break;
+            case "ArrowLeft":
+                x -= moveAmount;
+                break;
+        }
+
+        myBox.style.top = `${5 *y}px`;
+        myBox.style.left = `${5 *x}px`;
+
+    }
 })
 
