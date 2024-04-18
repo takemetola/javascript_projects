@@ -1,9 +1,22 @@
 .myBtn{
     font-size:4rem;
-    background-color: black;
     margin: 10px;
-    color:white;
+    border: none;
     border-radius: 5px;
-    width: 50px;
-    padding: 20px 60px;
+    padding: 10px 15px;
+}
+
+.enabled{
+    background-color: blueviolet;
+    color: white;
+}
+
+.hover{
+    box-shadow: 0 0 10px gey;
+    font-weight: bold;
+}
+
+.disabled{
+    background-color: grey;
+    color: grey;
 }
