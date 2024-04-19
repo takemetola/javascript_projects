@@ -2081,7 +2081,7 @@ myH1.addEventListener("click", event=>{
 });
  */
 
-let buttons = document.querySelectorAll(".myBtn");
+/* et buttons = document.querySelectorAll(".myBtn");
 
 buttons.forEach(button => {
     button.classList.add("enabled");
@@ -2097,4 +2097,56 @@ buttons.forEach(button => {
     button.addEventListener("mouseout", event=>{
         event.target.classList.toggle("hover");
     });
+}); */
+
+//--------------------------------------------------------------------------
+
+// Callback Hell = situation in JavaScript where callbacks
+// are nested within other callbacks  to the degree where the code is
+// difficult to read.
+// Old pattern to handle asynchronous functions.
+// Use Promises + async/wait to avoid Callback Hell
+
+function task1(callback) {
+
+    setTimeout(() => {
+        console.log("Task 1 complete");
+        callback();
+    }, 2000);
+
+}
+
+function task2(callback) {
+    setTimeout(() => {
+        console.log("Task 2 complete");
+        callback();
+
+    }, 1000);
+}
+
+function task3(callback) {
+    setTimeout(() => {
+        console.log("Task 3 complete");
+        callback();
+
+    }, 3000);
+}
+
+function task4(callback) {
+    setTimeout(() => {
+        console.log("Task 4 complete");
+        callback();
+
+    }, 1500);
+}
+
+task1(()=> {
+    task1(()=>{
+        task2(()=>{
+            task3(()=>{
+                task4(()=> console.log("All tasks complete"))
+            })
+        })
+    });
 });
+
