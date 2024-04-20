@@ -2107,7 +2107,7 @@ buttons.forEach(button => {
 // Old pattern to handle asynchronous functions.
 // Use Promises + async/wait to avoid Callback Hell
 
-function task1(callback) {
+/* function task1(callback) {
 
     setTimeout(() => {
         console.log("Task 1 complete");
@@ -2150,3 +2150,81 @@ task1(()=> {
     });
 });
 
+ */
+
+//--------------------------------------------------------------------------
+
+// Promise = an Object that manages asynchronous operations
+// wrap a Promise Object around (asynchronous code)
+// Pomise to return a value
+// PENDING -> RESOLVED OR REJECTED
+// new Promise((resolve, reject) => {asynchronous code})
+
+/* function walkDog(callback){
+    setTimeout(()=>{
+        console.log("You walk the dog");
+        callback();
+    }, 1500)
+}
+
+function cleanKitchen(callback){
+    setTimeout(()=>{
+        console.log("You clean the kitchen");
+        callback();
+
+    }, 2500)
+}
+
+function takeTrash(callback){
+    setTimeout(()=>{
+        console.log("You take out the trash");
+        callback();
+
+    }, 500)
+}
+
+walkDog(()=>{
+    cleanKitchen(()=>{
+        takeTrash(()=> console.log("You have finished all the chores!"));
+    });
+}); */
+
+function walkDog() {
+
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const dogWalked = false;
+            if(dogWalked){
+                resolve("You walk the dog")
+            }
+            else{
+                reject("You didnt walk the dog")
+            }
+        }, 1500);
+    });
+}
+
+function cleanKitchen() {
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("You clean the kitchen");
+        }, 2500)
+    })
+}
+
+function takeTrash() {
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("You take out the trash");
+        }, 500)
+    })
+}
+
+walkDog().then(value => { console.log(value); return cleanKitchen() }).
+    then(value => { console.log(value); return takeTrash() })
+    .then(value => {console.log(value); console.log("You have finished all the chores")})
+    .catch(error => console.error(error));
