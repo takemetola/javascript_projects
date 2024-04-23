@@ -1,0 +1,13 @@
+[{
+    "name": "Bob",
+    "age": 30,
+    "isEmployed": true
+},{
+    "name": "Gloria",
+    "age": 33,
+    "isEmployed": false
+},{
+    "name": "Ken",
+    "age": 21,
+    "isEmployed": true
+}]

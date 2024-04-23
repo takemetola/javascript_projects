@@ -2236,7 +2236,7 @@ walkDog().then(value => { console.log(value); return cleanKitchen() }).
     // Async = makes a function return a promise
     // Await = makes an async function wait for a promise
 
-    function walkDog() {
+    /* function walkDog() {
 
 
         return new Promise((resolve, reject) => {
@@ -2291,4 +2291,31 @@ walkDog().then(value => { console.log(value); return cleanKitchen() }).
 
     }
 
-    doChores();
+    doChores(); */
+
+    //--------------------------------------------------------------------------
+
+    // JSON - JavaScript Object Notation - data interchange format
+    // used for exchanging data between a server and a web application
+    // JSON files {key:value} or [value1, value2, value3]
+    // JSON.stringify() = converts a JS ojbect to JSON string
+    // JSON.parse() = converts a JSON string to a JS object
+
+    /* const jsonNames = ["Bob", "Lee", "Moe", "Andy"];
+    const person = `{
+        "name": "Bob",
+        "age": 30,
+        "isEmployed": true,
+        "hobbies": ["Cooking", "Hiking", "Reading"]
+    }`;
+
+    console.log(person);
+
+    const parsedData = JSON.parse(person);
+
+    console.log(parsedData); */
+
+    fetch("people.json").then(response => response.json())
+                        .then(values => values.forEach(value => console.log(value.name)))
+                        .catch(error => console.error(error));
+
