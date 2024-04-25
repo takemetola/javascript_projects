@@ -12,7 +12,9 @@
 updateClock();
 setInterval(updateClock, 1000); */
 
-function updateClock(){
+// Meridiem time
+
+/* function updateClock(){
     const now = new Date();
     let hours = now.getHours();
     const meridiem = hours >= 12 ? "PM" : "AM";
@@ -25,4 +27,4 @@ function updateClock(){
 }
 
 updateClock();
-setInterval(updateClock, 1000);
+setInterval(updateClock, 1000); */

@@ -5,12 +5,6 @@ const result = document.getElementById("result");
 
 let temp;
 
-
-
-
-
-
-
 function convert(){
     if(toFahrenheit.checked){
         temp = Number(textBox.value);
