@@ -2,40 +2,24 @@ let lists = document.getElementsByClassName("list");
 let rightBox = document.getElementById("right");
 let leftBox = document.getElementById("left");
 
-for(let list of lists){
-    list.addEventListener("dragstart", e => {
-        let selected = e.target;
-        e.dataTransfer.setData('text/plain', ''); // Required for Firefox compatibility
+for (let list of lists) {
+    list.addEventListener("dragstart", function(e) {
+        e.target.classList.add("dragging");
+    });
 
-        rightBox.addEventListener("dragover", dragOver);
-        rightBox.addEventListener("drop", dropRight);
-        
-        leftBox.addEventListener("dragover", dragOver);
-        leftBox.addEventListener("drop", dropLeft);
+    list.addEventListener("dragend", function(e) {
+        e.target.classList.remove("dragging");
     });
 }
 
-function dragOver(e) {
+right.addEventListener("dragover", function(e) {
     e.preventDefault();
-}
+});
 
-function dropRight(e) {
-    e.preventDefault();
-    let selected = document.querySelector('.list.dragging');
-    rightBox.appendChild(selected);
-    removeListeners();
-}
+right.addEventListener("drop", function(e) {
+    let selected = document.querySelector(".list.dragging");
+    if (selected) {
+        right.appendChild(selected);
+    }
+});
 
-function dropLeft(e) {
-    e.preventDefault();
-    let selected = document.querySelector('.list.dragging');
-    leftBox.appendChild(selected);
-    removeListeners();
-}
-
-function removeListeners() {
-    rightBox.removeEventListener("dragover", dragOver);
-    rightBox.removeEventListener("drop", dropRight);
-    leftBox.removeEventListener("dragover", dragOver);
-    leftBox.removeEventListener("drop", dropLeft);
-}
