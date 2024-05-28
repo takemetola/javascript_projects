@@ -73,3 +73,47 @@ nav a{
     cursor: pointer;
 }
 
+.text-box button:last-child{
+    background: #5957cf;
+    color: #fff;
+}
+
+.feature-img{
+    width: 400px;
+    position: absolute;
+    right: 15%;
+    top: 18%;
+    z-index: 2;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+}
+
+.side-bar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32%;
+    height: 100%;
+    background: linear-gradient(#8569ff, #006786);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.side-bar a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    transform: rotate(90deg);
+}
+
+.side-bar a img{
+    height: 30px;
+    margin-left: 20px;
+    transform: rotate(-90deg);
+}
+
