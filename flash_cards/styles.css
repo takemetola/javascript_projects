@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #313131, #4d4d4d);
+    font-family: Helvetica, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 350px;
+    height: 470px;
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+}
+
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.back{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(145, 142, 142, 0.25);
+    position: absolute;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.front{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(145, 142, 142, 0.25);
+    position: absolute;
+    text-align: center;
+    backface-visibility: hidden;
+    background-image: url(images/Flag-Germany.jpg);
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+
+
