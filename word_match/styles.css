@@ -1,28 +1,26 @@
 .container {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    border: solid;
+    height: 50vh;
+    width: 50vh;
 }
 
-.box-container {
-    border: 5px solid;
-    width: 300px;
-    min-height: 400px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px; 
-    padding: 10px;
-}
-
-.list {
-    height: 60px;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.box-left, .box-right{
     border: solid 5px;
+    height: 40px;
+    margin-top: 50%;
+    border-radius: 20%;
     cursor: pointer;
+    align-items: center;
+}
+
+.box-left{
+    margin-left: auto;
+    flex: 1;
+}
+
+.box-right{
+    margin-right: auto;
+    flex: 1;
 }
